@@ -266,16 +266,16 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('fra
       label: "\u8A00\u8A9E",
       options: [{
         label: 'PHP',
-        value: 'php'
+        value: 'PHP'
       }, {
         label: 'JavaScript',
-        value: 'js'
+        value: 'JavaScript'
       }, {
         label: 'Ruby',
-        value: 'ruby'
+        value: 'Ruby'
       }, {
         label: 'Erlang',
-        value: 'erlang'
+        value: 'Erlang'
       }],
       value: language,
       onChange: function onChange(value) {

@@ -69,10 +69,10 @@ registerBlockType( 'framework-dl/description-block', {
 					<SelectControl
 						label="言語"
 						options={ [
-							{ label: 'PHP', value: 'php' },
-							{ label: 'JavaScript', value: 'js' },
-							{ label: 'Ruby', value: 'ruby' },
-							{ label: 'Erlang', value: 'erlang' },
+							{ label: 'PHP', value: 'PHP' },
+							{ label: 'JavaScript', value: 'JavaScript' },
+							{ label: 'Ruby', value: 'Ruby' },
+							{ label: 'Erlang', value: 'Erlang' },
 						] }
 						value={ language }
 						onChange={ ( value ) =>
