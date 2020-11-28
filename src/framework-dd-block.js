@@ -1,7 +1,9 @@
 import { registerBlockType } from '@wordpress/blocks';
+import { TextControl } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 
 import './style.scss';
+import './editor.scss';
 
 registerBlockType( 'framework-dl/description-block', {
 	title: __( 'Framework description ', 'framework-dl-block' ),
@@ -16,14 +18,16 @@ registerBlockType( 'framework-dl/description-block', {
 		html: false,
 	},
 
-	edit: ( { className } ) => {
+	edit: () => {
 		return (
-			<p className={ className }>
-				{ __(
-					'Framework description block, this is inner block!',
-					'framework-dl-block'
-				) }
-			</p>
+			<>
+			<TextControl
+				placeholder="Framework name"
+			/>
+			<TextControl
+				placeholder="Framework name"
+			/>
+			</>
 		);
 	},
 

@@ -36,13 +36,13 @@ function framework_dl_framework_dl_block_block_init() {
 	);
 	wp_set_script_translations( 'framework-dl-framework-dl-block-block-editor', 'framework-dl-block' );
 
-	//$editor_css = 'build/index.css';
-	//wp_register_style(
-	//	'framework-dl-framework-dl-block-block-editor',
-	//	plugins_url( $editor_css, __FILE__ ),
-	//	array(),
-	//	filemtime( "$dir/$editor_css" )
-	//);
+	$editor_css = 'build/index.css';
+	wp_register_style(
+		'framework-dl-framework-dl-block-block-editor',
+		plugins_url( $editor_css, __FILE__ ),
+		array(),
+		filemtime( "$dir/$editor_css" )
+	);
 
 	$style_css = 'build/style-index.css';
 	wp_register_style(
