@@ -214,13 +214,45 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('fra
     // Removes support for an HTML mode.
     html: false
   },
-  edit: function edit() {
+  attributes: {
+    name: {
+      type: 'string'
+    },
+    since: {
+      type: 'integer',
+      default: 2010
+    },
+    language: {
+      type: 'string'
+    },
+    description: {
+      type: 'string'
+    }
+  },
+  edit: function edit(_ref) {
+    var attributes = _ref.attributes,
+        setAttributes = _ref.setAttributes;
+    var name = attributes.name,
+        since = attributes.since,
+        language = attributes.language,
+        description = attributes.description;
     return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["TextControl"], {
-      placeholder: "Framework name"
+      placeholder: "Framework name",
+      value: name,
+      onChange: function onChange(value) {
+        return setAttributes({
+          name: value
+        });
+      }
     }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["Flex"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["__experimentalNumberControl"], {
       label: "\u767B\u5834\u5E74",
       shiftStep: 1,
-      value: "2010"
+      value: since,
+      onChange: function onChange(value) {
+        return setAttributes({
+          since: parseInt(value, 10)
+        });
+      }
     }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["SelectControl"], {
       label: "\u8A00\u8A9E",
       options: [{
@@ -235,9 +267,21 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('fra
       }, {
         label: 'Erlang',
         value: 'erlang'
-      }]
+      }],
+      value: language,
+      onChange: function onChange(value) {
+        return setAttributes({
+          language: value
+        });
+      }
     })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["TextareaControl"], {
-      placeholder: "\u6982\u8981"
+      placeholder: "\u6982\u8981",
+      value: description,
+      onChange: function onChange(value) {
+        return setAttributes({
+          description: value
+        });
+      }
     }));
   },
   save: function save() {
@@ -294,7 +338,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('fra
     }));
   },
   save: function save() {
-    return null;
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["InnerBlocks"].Content, null);
   }
 });
 

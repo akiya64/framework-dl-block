@@ -35,6 +35,6 @@ registerBlockType( 'framework-dl/framework-dl-block', {
 	},
 
 	save: () => {
-		return null;
+		return <InnerBlocks.Content />;
 	},
 } );

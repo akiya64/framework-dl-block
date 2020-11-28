@@ -23,34 +23,62 @@ registerBlockType( 'framework-dl/description-block', {
 		html: false,
 	},
 
-	edit: () => {
+	attributes: {
+		name: {
+			type: 'string',
+		},
+		since: {
+			type: 'integer',
+			default: 2010,
+		},
+		language: {
+			type: 'string',
+		},
+		description: {
+			type: 'string',
+		},
+	},
+
+	edit: ( { attributes, setAttributes } ) => {
+		const { name, since, language, description } = attributes;
 		return (
 			<>
-			<TextControl
-				placeholder="Framework name"
-			/>
-			<Flex>
-				<NumberControl
-					label="登場年"
-					shiftStep={ 1 }
-					value="2010"
+				<TextControl
+					placeholder="Framework name"
+					value={ name }
+					onChange={ ( value ) => setAttributes( { name: value } ) }
 				/>
-				<SelectControl
-					label="言語"
-					options={ [
+				<Flex>
+					<NumberControl
+						label="登場年"
+						shiftStep={ 1 }
+						value={ since }
+						onChange={ ( value ) =>
+							setAttributes( { since: parseInt( value, 10 ) } )
+						}
+					/>
+					<SelectControl
+						label="言語"
+						options={ [
 							{ label: 'PHP', value: 'php' },
 							{ label: 'JavaScript', value: 'js' },
 							{ label: 'Ruby', value: 'ruby' },
 							{ label: 'Erlang', value: 'erlang' },
-						]
+						] }
+						value={ language }
+						onChange={ ( value ) =>
+							setAttributes( { language: value } )
+						}
+					/>
+				</Flex>
+
+				<TextareaControl
+					placeholder="概要"
+					value={ description }
+					onChange={ ( value ) =>
+						setAttributes( { description: value } )
 					}
 				/>
-			</Flex>
-
-			<TextareaControl
-				placeholder="概要"
-			/>
-
 			</>
 		);
 	},
