@@ -18,6 +18,10 @@ registerBlockType( 'framework-dl/description-block', {
 	category: 'widgets',
 
 	parent: [ 'framework-dl/framework-dl-block' ],
+	supports: {
+		// Removes support for an HTML mode.
+		html: false,
+	},
 
 	attributes: {
 		name: {
@@ -26,7 +30,7 @@ registerBlockType( 'framework-dl/description-block', {
 			selector: 'dt',
 		},
 		since: {
-			type: 'integer',
+			type: 'text',
 			default: 2010,
 			source: 'text',
 			selector: 'span.since',
@@ -59,7 +63,7 @@ registerBlockType( 'framework-dl/description-block', {
 						shiftStep={ 1 }
 						value={ since }
 						onChange={ ( value ) =>
-							setAttributes( { since: parseInt( value, 10 ) } )
+							setAttributes( { since: value } )
 						}
 					/>
 					<SelectControl

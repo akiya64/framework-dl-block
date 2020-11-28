@@ -210,6 +210,10 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('fra
   description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])('Framework descriptions block', 'framework-dl-block'),
   category: 'widgets',
   parent: ['framework-dl/framework-dl-block'],
+  supports: {
+    // Removes support for an HTML mode.
+    html: false
+  },
   attributes: {
     name: {
       type: 'string',
@@ -217,7 +221,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('fra
       selector: 'dt'
     },
     since: {
-      type: 'integer',
+      type: 'text',
       default: 2010,
       source: 'text',
       selector: 'span.since'
@@ -255,7 +259,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('fra
       value: since,
       onChange: function onChange(value) {
         return setAttributes({
-          since: parseInt(value, 10)
+          since: value
         });
       }
     }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["SelectControl"], {
