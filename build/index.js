@@ -229,7 +229,8 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('fra
     language: {
       type: 'string',
       source: 'text',
-      selector: 'span.language'
+      selector: 'span.language',
+      default: ''
     },
     description: {
       type: 'string',
@@ -353,7 +354,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('fra
     }));
   },
   save: function save() {
-    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["InnerBlocks"].Content, null);
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("dl", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["InnerBlocks"].Content, null));
   }
 });
 

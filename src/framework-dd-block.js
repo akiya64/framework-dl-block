@@ -39,6 +39,7 @@ registerBlockType( 'framework-dl/description-block', {
 			type: 'string',
 			source: 'text',
 			selector: 'span.language',
+			default: '',
 		},
 		description: {
 			type: 'string',
