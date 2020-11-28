@@ -1,9 +1,14 @@
 import { registerBlockType } from '@wordpress/blocks';
-import { TextControl } from '@wordpress/components';
+import {
+	Flex,
+	TextControl,
+	__experimentalNumberControl as NumberControl,
+	SelectControl,
+	TextareaControl,
+} from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 
 import './style.scss';
-import './editor.scss';
 
 registerBlockType( 'framework-dl/description-block', {
 	title: __( 'Framework description ', 'framework-dl-block' ),
@@ -24,9 +29,28 @@ registerBlockType( 'framework-dl/description-block', {
 			<TextControl
 				placeholder="Framework name"
 			/>
-			<TextControl
-				placeholder="Framework name"
+			<Flex>
+				<NumberControl
+					label="登場年"
+					shiftStep={ 1 }
+					value="2010"
+				/>
+				<SelectControl
+					label="言語"
+					options={ [
+							{ label: 'PHP', value: 'php' },
+							{ label: 'JavaScript', value: 'js' },
+							{ label: 'Ruby', value: 'ruby' },
+							{ label: 'Erlang', value: 'erlang' },
+						]
+					}
+				/>
+			</Flex>
+
+			<TextareaControl
+				placeholder="概要"
 			/>
+
 			</>
 		);
 	},
