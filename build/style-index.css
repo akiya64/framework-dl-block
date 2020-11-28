@@ -5,8 +5,7 @@
  * Replace them with your own styles or remove the file completely.
  */
 .wp-block-framework-dl-framework-dl-block {
-  background-color: var(--wp-admin-theme-color);
-  color: #fff;
+  background-color: none;
   padding: 2px; }
 
 

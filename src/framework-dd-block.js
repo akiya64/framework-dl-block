@@ -18,10 +18,6 @@ registerBlockType( 'framework-dl/description-block', {
 	category: 'widgets',
 
 	parent: [ 'framework-dl/framework-dl-block' ],
-	supports: {
-		// Removes support for an HTML mode.
-		html: false,
-	},
 
 	attributes: {
 		name: {

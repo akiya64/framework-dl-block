@@ -19,11 +19,6 @@ registerBlockType( 'framework-dl/framework-dl-block', {
 
 	icon: 'feedback',
 
-	supports: {
-		// Removes support for an HTML mode.
-		html: false,
-	},
-
 	edit: ( { className } ) => {
 		return (
 			<dl className={ className }>
