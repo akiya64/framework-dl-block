@@ -216,17 +216,25 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('fra
   },
   attributes: {
     name: {
-      type: 'string'
+      type: 'string',
+      source: 'text',
+      selector: 'dt'
     },
     since: {
       type: 'integer',
-      default: 2010
+      default: 2010,
+      source: 'text',
+      selector: 'span.since'
     },
     language: {
-      type: 'string'
+      type: 'string',
+      source: 'text',
+      selector: 'span.language'
     },
     description: {
-      type: 'string'
+      type: 'string',
+      source: 'text',
+      selector: 'dd.description'
     }
   },
   edit: function edit(_ref) {
@@ -284,8 +292,15 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('fra
       }
     }));
   },
-  save: function save() {
-    return null;
+  save: function save(_ref2) {
+    var attributes = _ref2.attributes;
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("dt", null, attributes.name), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("dd", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", {
+      className: "since"
+    }, attributes.since), "~"), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("dd", null, "\u8A00\u8A9E\uFF1A", Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", {
+      className: "language"
+    }, attributes.language)), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("dd", {
+      className: "description"
+    }, attributes.description));
   }
 });
 

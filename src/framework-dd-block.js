@@ -26,16 +26,24 @@ registerBlockType( 'framework-dl/description-block', {
 	attributes: {
 		name: {
 			type: 'string',
+			source: 'text',
+			selector: 'dt',
 		},
 		since: {
 			type: 'integer',
 			default: 2010,
+			source: 'text',
+			selector: 'span.since',
 		},
 		language: {
 			type: 'string',
+			source: 'text',
+			selector: 'span.language',
 		},
 		description: {
 			type: 'string',
+			source: 'text',
+			selector: 'dd.description',
 		},
 	},
 
@@ -83,7 +91,19 @@ registerBlockType( 'framework-dl/description-block', {
 		);
 	},
 
-	save: () => {
-		return null;
+	save: ( { attributes } ) => {
+		return (
+			<>
+				<dt>{ attributes.name }</dt>
+				<dd>
+					<span className="since">{ attributes.since }</span>~
+				</dd>
+				<dd>
+					言語：
+					<span className="language">{ attributes.language }</span>
+				</dd>
+				<dd className="description">{ attributes.description }</dd>
+			</>
+		);
 	},
 } );
