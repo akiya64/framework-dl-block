@@ -243,7 +243,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('fra
   title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])('Framework description list', 'framework-dl-block'),
   description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])('Example block written with ESNext standard and JSX support – build step required.', 'framework-dl-block'),
   category: 'widgets',
-  icon: 'smiley',
+  icon: 'feedback',
   supports: {
     // Removes support for an HTML mode.
     html: false

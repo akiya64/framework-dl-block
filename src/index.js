@@ -15,7 +15,7 @@ registerBlockType( 'framework-dl/framework-dl-block', {
 
 	category: 'widgets',
 
-	icon: 'smiley',
+	icon: 'feedback',
 
 	supports: {
 		// Removes support for an HTML mode.
