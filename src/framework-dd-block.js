@@ -97,7 +97,7 @@ registerBlockType( 'framework-dl/description-block', {
 			<>
 				<dt>{ attributes.name }</dt>
 				<dd>
-					<span className="since">{ attributes.since }</span>~
+					<span className="since">{ attributes.since }</span>年~
 				</dd>
 				<dd>
 					言語：
