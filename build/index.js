@@ -295,11 +295,13 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('fra
   },
   save: function save(_ref2) {
     var attributes = _ref2.attributes;
-    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("dt", null, attributes.name), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("dd", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", {
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("dt", null, attributes.name), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: "flex"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("dd", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", {
       className: "since"
-    }, attributes.since), "~"), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("dd", null, "\u8A00\u8A9E\uFF1A", Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", {
+    }, attributes.since), "\u5E74\uFF5E"), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("dd", null, "\u8A00\u8A9E\uFF1A", Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", {
       className: "language"
-    }, attributes.language)), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("dd", {
+    }, attributes.language))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("dd", {
       className: "description"
     }, attributes.description));
   }
@@ -340,7 +342,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('fra
   title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])('Framework description list', 'framework-dl-block'),
   description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])('Example block written with ESNext standard and JSX support – build step required.', 'framework-dl-block'),
   category: 'widgets',
-  icon: 'feedback',
+  icon: 'smiley',
   edit: function edit(_ref) {
     var className = _ref.className;
     return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("dl", {

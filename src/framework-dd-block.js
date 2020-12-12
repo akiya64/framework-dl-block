@@ -96,13 +96,15 @@ registerBlockType( 'framework-dl/description-block', {
 		return (
 			<>
 				<dt>{ attributes.name }</dt>
-				<dd>
-					<span className="since">{ attributes.since }</span>年~
-				</dd>
-				<dd>
-					言語：
-					<span className="language">{ attributes.language }</span>
-				</dd>
+				<div className="flex">
+					<dd>
+						<span className="since">{ attributes.since }</span>年～
+					</dd>
+					<dd>
+						言語：
+						<span className="language">{ attributes.language }</span>
+					</dd>
+				</div>
 				<dd className="description">{ attributes.description }</dd>
 			</>
 		);

@@ -8,4 +8,20 @@
 .wp-block-framework-dl-framework-dl-block {
 	background-color: none;
 	padding: 2px;
+
+	dt {
+		border-bottom: solid 1px black;
+		padding: 0.25rem 0;
+		margin-bottom: 0.5rem;
+	}
+	.flex {
+		margin: 1rem 0;
+		display: flex;
+		dd + dd {
+			margin-left: 2rem;
+		}
+	}
+	dd, dt {
+		margin-left: 0;
+	}
 }
