@@ -1,9 +1,11 @@
 <?php
 /**
  * Plugin Name:     Framework description list
- * Description:     Example block written with ESNext standard and JSX support – build step required.
- * Version:         0.1.0
+ * Plugin URI:      https://github.com/akiya64/framework-dl-block
+ * Description:     Example of Gutenberg block for commentary on the blog how to create Guteberg block.
+ * Version:         1.0.0
  * Author:          Akiya Kasumi
+ * Author URI:      https://autumnsky.jp/
  * License:         GPL-2.0-or-later
  * License URI:     https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:     framework-dl-block
