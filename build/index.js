@@ -342,13 +342,14 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('fra
   title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])('Framework description list', 'framework-dl-block'),
   description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])('Example block written with ESNext standard and JSX support – build step required.', 'framework-dl-block'),
   category: 'widgets',
-  icon: 'smiley',
+  icon: 'feedback',
   edit: function edit(_ref) {
     var className = _ref.className;
     return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("dl", {
       className: className
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["InnerBlocks"], {
-      allowedBlocks: ['framework-dl/description-block']
+      allowedBlocks: ['framework-dl/description-block'],
+      template: [['framework-dl/description-block', {}]]
     }));
   },
   save: function save() {

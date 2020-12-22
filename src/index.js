@@ -24,6 +24,7 @@ registerBlockType( 'framework-dl/framework-dl-block', {
 			<dl className={ className }>
 				<InnerBlocks
 					allowedBlocks={ [ 'framework-dl/description-block' ] }
+					template={ [ [ 'framework-dl/description-block', {} ] ] }
 				/>
 			</dl>
 		);
