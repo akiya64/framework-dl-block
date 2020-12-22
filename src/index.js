@@ -1,5 +1,6 @@
-import { registerBlockType } from '@wordpress/blocks';
+import { registerBlockType, createBlock } from '@wordpress/blocks';
 import { InnerBlocks } from '@wordpress/block-editor';
+import { dispatch } from '@wordpress/data';
 import { __ } from '@wordpress/i18n';
 
 import './editor.scss';
@@ -19,12 +20,20 @@ registerBlockType( 'framework-dl/framework-dl-block', {
 
 	icon: 'feedback',
 
-	edit: ( { className } ) => {
+	edit: ( { className, clientId } ) => {
 		return (
 			<dl className={ className }>
 				<InnerBlocks
 					allowedBlocks={ [ 'framework-dl/description-block' ] }
 					template={ [ [ 'framework-dl/description-block', {} ] ] }
+					renderAppender={ () => (
+						<button
+							type="button"
+							onClick={ () => { dispatch('core/block-editor').insertBlocks(createBlock('framework-dl/description-block'), 9999, clientId) } }
+						>
+							{ __( 'Add', 'framework-dl-block' ) }
+						</button>
+					) }
 				/>
 			</dl>
 		);
