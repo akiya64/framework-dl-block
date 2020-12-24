@@ -6,7 +6,15 @@
 .wp-block-framework-dl-framework-dl-block {
   background: none; }
   .wp-block-framework-dl-framework-dl-block label {
-    color: black; }
+    color: black;
+    font-size: 1rem; }
+  .wp-block-framework-dl-framework-dl-block .components-flex > .components-flex {
+    width: calc( 100% / 3); }
+  .wp-block-framework-dl-framework-dl-block .components-flex > .components-base-control {
+    width: calc( 100% / 3);
+    padding-top: 8px; }
+  .wp-block-framework-dl-framework-dl-block .components-flex .components-select-control__input {
+    font-size: 11px !important; }
 
 
 /*# sourceMappingURL=index.css.map*/

@@ -11,13 +11,16 @@
     border-bottom: solid 1px black;
     padding: 0.25rem 0;
     margin-bottom: 0.5rem; }
+  .wp-block-framework-dl-framework-dl-block dd, .wp-block-framework-dl-framework-dl-block dt {
+    margin-left: 0;
+    padding-left: 0; }
   .wp-block-framework-dl-framework-dl-block .flex {
-    margin: 1rem 0;
+    margin: 0.5rem 0;
     display: flex; }
     .wp-block-framework-dl-framework-dl-block .flex dd + dd {
       margin-left: 2rem; }
-  .wp-block-framework-dl-framework-dl-block dd, .wp-block-framework-dl-framework-dl-block dt {
-    margin-left: 0; }
+  .wp-block-framework-dl-framework-dl-block dd + dt {
+    margin-top: 2rem; }
 
 
 /*# sourceMappingURL=style-index.css.map*/

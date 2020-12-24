@@ -14,14 +14,18 @@
 		padding: 0.25rem 0;
 		margin-bottom: 0.5rem;
 	}
+	dd, dt {
+		margin-left: 0;
+		padding-left: 0;
+	}
 	.flex {
-		margin: 1rem 0;
+		margin: 0.5rem 0;
 		display: flex;
 		dd + dd {
 			margin-left: 2rem;
 		}
 	}
-	dd, dt {
-		margin-left: 0;
+	dd + dt {
+		margin-top: 2rem;
 	}
 }

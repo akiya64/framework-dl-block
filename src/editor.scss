@@ -9,5 +9,22 @@
 
 	label {
 		color: black;
+		font-size: 1rem;
+	}
+
+	//year
+	.components-flex > .components-flex {
+		width: calc( 100% / 3 );
+	}
+
+	//language
+	.components-flex{
+		& > .components-base-control {
+			width: calc( 100% / 3 );
+			padding-top: 8px;
+		}
+		.components-select-control__input {
+			font-size: 11px !important;
+		}
 	}
 }
